@@ -13,6 +13,11 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
+app.post('/webhook', function(request, response) {
+    console.log('webhook');
+	response.status(200).send('Trade Finance Client')
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
