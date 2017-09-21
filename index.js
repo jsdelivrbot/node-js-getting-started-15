@@ -46,7 +46,7 @@ app.post('/webhook', function(request, response) {
 	if(request !== undefined && request.body !== undefined)
 	console.log('request.body.payload'+request.body.payload);
 	console.log('response'+response);
-	console.log('request'+request);
+	console.log('request'+JSON.stringify(request));
 	response.status(200).send('Ok')
 });
 
