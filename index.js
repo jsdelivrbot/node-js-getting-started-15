@@ -34,7 +34,7 @@ app.post('/webhook', function(request, response) {
 	username:"PR assist For PR#99",
 	as_user:"true",
 	link_names:"true",
-	text: "This is posted to #general and comes from a bot named webhookbot."
+	text: "This is posted to #general and comes from a bot named webhookbot for repo "+request.query.repo
 	}, function(err, response) {
 		console.log(response);
 	});
