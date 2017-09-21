@@ -38,6 +38,8 @@ app.post('/webhook', function(request, response) {
 	}, function(err, response) {
 		console.log(response);
 	});
+	console.log('request'+request);
+	console.log('response'+response);
 	response.status(200).send('Trade Finance Client')
 });
 
