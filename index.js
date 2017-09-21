@@ -57,7 +57,7 @@ function getGithupApiUsers(username,response){
 	})
 	.catch(function (error) {
     console.log('fail'+error);
-    response.status(200).send(false)
+    response.status(201).send(false)
 	});
 } 
 
