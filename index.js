@@ -38,8 +38,11 @@ app.post('/webhook', function(request, response) {
 	}, function(err, res) {
 		//console.log(res);
 	});
+	if(request !== undefined)
 	console.log('request.payload'+request.payload);
+	if(request !== undefined)
 	console.log('request.body'+request.body);
+	if(request !== undefined && request.body !== undefined)
 	console.log('request.body.payload'+request.body.payload);
 	console.log('response'+response);
 	response.status(200).send('Ok')
