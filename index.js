@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text({ type: 'application/json' }));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
