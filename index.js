@@ -40,9 +40,7 @@ app.post('/webhook', function(request, response) {
 	}, function(err, res) {
 		//console.log(res);
 	});
-	
-	if(request !== undefined)
-	console.log('request.body'+request.body.review);
+
 	response.status(200).send('Ok')
 });
 
