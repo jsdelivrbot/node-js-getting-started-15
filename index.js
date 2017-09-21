@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 });
 
 app.post('/webhook', function(request, response) {
-	console.log('webhook'+request.body.payload);
+	console.log('webhook'+request.body);
 	let webhookUri = "https://hooks.slack.com/services/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";
 	let slack = new Slack();
 	slack.setWebhook(webhookUri);
