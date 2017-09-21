@@ -26,7 +26,7 @@ app.get('/', function(request, response) {
 });
 
 app.post('/webhook', function(request, response) {
-	console.log('webhook'+request.body);
+	console.log('webhook'+request.body.action);
 	let webhookUri = "https://hooks.slack.com/services/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";
 	let slack = new Slack();
 	slack.setWebhook(webhookUri);
@@ -42,7 +42,7 @@ app.post('/webhook', function(request, response) {
 	});
 	
 	if(request !== undefined)
-	console.log('request.body'+request.body);
+	console.log('request.body'+request.body.review);
 	response.status(200).send('Ok')
 });
 
