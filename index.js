@@ -19,7 +19,20 @@ app.get('/', function(request, response) {
 });
 
 app.post('/webhook', function(request, response) {
-    console.log('webhook');
+	console.log('webhook');
+	let webhookUri = "https://hooks.slack.com/services/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";
+	let slack = new Slack();
+	slack.setWebhook(webhookUri);
+	slack.webhook({
+	channel: "@mpramodkumar",
+	icon_emoji: ":ghost:",
+	username:"PR assist For PR#99",
+	as_user:"true",
+	link_names:"true",
+	text: "This is posted to #general and comes from a bot named webhookbot."
+	}, function(err, response) {
+		console.log(response);
+	});
 	response.status(200).send('Trade Finance Client')
 });
 
