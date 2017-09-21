@@ -36,10 +36,12 @@ app.post('/webhook', function(request, response) {
 	link_names:"true",
 	text: "This is posted to #general and comes from a bot named webhookbot for repo "+request.query.repo
 	}, function(err, res) {
-		//console.log(response);
+		console.log(response);
 	});
-	console.log('request'+JSON.stringify(request));
-	console.log('response'+JSON.stringify(response));
+	console.log('request.payload'+request.payload);
+	console.log('request.body'+request.body);
+	console.log('request.body.payload)'+request.body.payload);
+	console.log('response'+response);
 	response.status(200).send('Trade Finance Client')
 });
 
