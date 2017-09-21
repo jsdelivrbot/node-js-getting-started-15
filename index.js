@@ -35,8 +35,8 @@ app.post('/webhook', function(request, response) {
 	as_user:"true",
 	link_names:"true",
 	text: "This is posted to #general and comes from a bot named webhookbot for repo "+request.query.repo
-	}, function(err, response) {
-		console.log(response);
+	}, function(err, res) {
+		//console.log(response);
 	});
 	console.log('request'+request);
 	console.log('response'+response);
